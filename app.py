@@ -1,6 +1,5 @@
 import numpy as np
-import pandas as pd
-from flask import Flask, request, render_template
+from flask import Flask, request, jsonify, render_template
 import pickle
 
 app = Flask(__name__)
@@ -12,25 +11,33 @@ def home():
 
 @app.route('/predict',methods=['POST'])
 def predict():
-    input_features = [float(x) for x in request.form.values()]
-    features_value = [np.array(input_features)]
-    
-    features_name = [ "age", "trestbps","chol","thalach", "oldpeak", "sex_0",
-                       "  sex_1", "cp_0", "cp_1", "cp_2", "cp_3","  fbs_0",
-                        "restecg_0","restecg_1","restecg_2","exang_0","exang_1",
-                        "slope_0","slope_1","slope_2","ca_0","ca_1","ca_2","thal_1",
-                        "thal_2","thal_3"]
-    
-    df = pd.DataFrame(features_value, columns=features_name)
-    output = model.predict(df)
-        
-    if output == 1:
-        res_val = "** heart disease **"
-    else:
-        res_val = "no heart disease "
-        
+    '''
+    For rendering results on HTML GUI
+    '''
+    int_features = [float(x) for x in request.form.values()]
+    final_features = [np.array(int_features)]
+    prediction = model.predict(final_features)
 
-    return render_template('index.html', prediction_text='Patient has {}'.format(res_val))
+    output = round(prediction[0],12)
+    if output==1:
+        return render_template('index.html', prediction_text='We are sorry to inform that you may have Heart Disease! Please seek medical advise')
+    else:
+        return render_template('index.html', prediction_text='Congratulations! You dont have any Heart Disease! Stay Healthy')
+        
+    
+
+@app.route('/predict_api',methods=['POST'])
+def predict_api():
+    '''
+    For direct API calls trought request
+    '''
+    data = request.get_json(force=True)
+    prediction = model.predict([np.array(list(data.values()))])
+
+    output = prediction[0]
+    return jsonify(output)
 
 if __name__ == "__main__":
-    app.run()
+    app.run(debug=False)
+app.py.txt
+Displaying model.py.txt.
