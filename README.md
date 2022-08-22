@@ -5,11 +5,6 @@ According to [W.H.O](https://www.who.int/health-topics/cardiovascular-diseases#t
 ## About Project 
 The objective of this project is to make the process of diagnosis easier by creating effiective machine learning model. Through this project anyone can predict their heart health just by inputing accurate asked questions.
 
-## Team
-* Dhriti Ojha(Myself)
-* Prarona Das
-* Riya Majee
-
 ## Dataset details
 The dataset we used are from kaggle [dataset](https://www.kaggle.com/amanajmera1/framingham-heart-study-dataset)
 
