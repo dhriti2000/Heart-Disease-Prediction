@@ -6,9 +6,9 @@ According to [W.H.O](https://www.who.int/health-topics/cardiovascular-diseases#t
 The objective of this project is to make the process of diagnosis easier by creating effiective machine learning model. The project consist of two different model one for quick diagnosis and another for advanced diagnosis. For both model different set of input is taken according to requirment.
 
 ## Team
-*Dhriti Ojha(Myself)
-*Prarona Das
-*Riya Majee
+* Dhriti Ojha(Myself)
+* Prarona Das
+* Riya Majee
 
 ## Dataset details
 The dataset we used are from kaggle [dataset](https://www.kaggle.com/amanajmera1/framingham-heart-study-dataset)
