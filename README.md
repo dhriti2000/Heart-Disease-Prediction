@@ -3,7 +3,7 @@
 According to [W.H.O](https://www.who.int/health-topics/cardiovascular-diseases#tab=tab_1), Cardiovascular diseases are number 1 cause of death globally, taking an estimate  of 17.9 million each year. Amid the Covid-19 pandemic cardiac patients fail to get immediate treatments.Carrying out tests for cardiac issues during a crisis like pandemic is also very difficult.Unpredictable nature of cardiac disorders make it all the more difficult to diagnose.
 
 ## About Project 
-The objective of this project is to make the process of diagnosis easier by creating effiective machine learning model. The project consist of two different model one for quick diagnosis and another for advanced diagnosis. For both model different set of input is taken according to requirment.
+The objective of this project is to make the process of diagnosis easier by creating effiective machine learning model. Through this project anyone can predict their heart health just by inputing accurate asked questions.
 
 ## Team
 * Dhriti Ojha(Myself)
